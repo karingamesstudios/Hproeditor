@@ -1,0 +1,92 @@
+import type { EditorElement } from '../types/editor';
+
+export const templates: { id: string; name: string; description: string; data: EditorElement }[] = [
+  {
+    id: 'blank',
+    name: 'Página en Blanco',
+    description: 'Empieza desde cero con una estructura completamente limpia.',
+    data: {
+      id: 'root-body',
+      name: 'Cuerpo de la Página',
+      type: 'section',
+      styles: {
+        backgroundColor: '#09090b',
+        color: '#ffffff',
+        paddingTop: '40px',
+        paddingBottom: '40px',
+        paddingLeft: '24px',
+        paddingRight: '24px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '16px',
+        minHeight: '100vh',
+      },
+      children: [],
+    },
+  },
+  {
+    id: 'landing',
+    name: 'Landing Page de Producto',
+    description: 'Hero atractivo con título, subtexto y un botón principal de acción.',
+    data: {
+      id: 'root-body',
+      name: 'Cuerpo de la Página',
+      type: 'section',
+      styles: {
+        backgroundColor: '#09090b',
+        color: '#ffffff',
+        paddingTop: '60px',
+        paddingBottom: '60px',
+        paddingLeft: '24px',
+        paddingRight: '24px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '24px',
+        minHeight: '100vh',
+      },
+      children: [
+        {
+          id: 'hero-title',
+          name: 'Título Principal',
+          type: 'heading',
+          content: 'Crea tu sitio web en minutos',
+          styles: {
+            fontSize: '42px',
+            fontWeight: 'bold',
+            color: '#ffffff',
+            textAlign: 'center',
+          },
+        },
+        {
+          id: 'hero-sub',
+          name: 'Subtítulo',
+          type: 'paragraph',
+          content: 'El editor visual sin código que convierte tus ideas en HTML y CSS real.',
+          styles: {
+            fontSize: '18px',
+            color: '#a1a1aa',
+            textAlign: 'center',
+          },
+        },
+        {
+          id: 'hero-cta',
+          name: 'Botón CTA',
+          type: 'button',
+          content: 'Empezar Gratis',
+          styles: {
+            backgroundColor: '#4f46e5',
+            color: '#ffffff',
+            paddingTop: '12px',
+            paddingBottom: '12px',
+            paddingLeft: '28px',
+            paddingRight: '28px',
+            borderRadius: '8px',
+            fontWeight: '600',
+            fontSize: '15px',
+          },
+        },
+      ],
+    },
+  },
+];
